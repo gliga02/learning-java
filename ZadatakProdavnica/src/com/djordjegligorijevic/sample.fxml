@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.djordjegligorijevic.Controller">
+   <children>
+      <TextField fx:id="sifraField" layoutX="118.0" layoutY="14.0" />
+      <TextField fx:id="nazivField" layoutX="118.0" layoutY="65.0" />
+      <TextField fx:id="kolicinaField" layoutX="118.0" layoutY="119.0" />
+      <TextField fx:id="cenaField" layoutX="118.0" layoutY="175.0" />
+      <Label layoutX="43.0" layoutY="18.0" text="Sifra " />
+      <Label layoutX="42.0" layoutY="69.0" text="Naziv" />
+      <Label layoutX="43.0" layoutY="123.0" text="Kolicina" />
+      <Label layoutX="43.0" layoutY="179.0" text="Cena" />
+      <Button layoutX="38.0" layoutY="236.0" mnemonicParsing="false" onAction="#dodajUKorpu" text="Ubaci u korpu" />
+      <ListView fx:id="korpa" layoutX="420.0" layoutY="44.0" prefHeight="200.0" prefWidth="273.0" />
+      <ListView fx:id="povrat" layoutX="420.0" layoutY="284.0" prefHeight="200.0" prefWidth="273.0" />
+      <Label layoutX="532.0" layoutY="18.0" text="Korpa" />
+      <Label layoutX="531.0" layoutY="261.0" text="Povrat" />
+      <Button layoutX="152.0" layoutY="236.0" mnemonicParsing="false" onAction="#prikaziIznos" text="Prikazi iznos" />
+      <Label fx:id="iznos" layoutX="43.0" layoutY="311.0" text="Iznos bez poreza:" />
+      <Label fx:id="iznosPorez" layoutX="43.0" layoutY="342.0" text="Iznos sa porezom:" />
+      <Button layoutX="257.0" layoutY="236.0" mnemonicParsing="false" onAction="#izbaciIzKorpe" text="Izbaci iz korpe" />
+      <Button layoutX="37.0" layoutY="415.0" mnemonicParsing="false" onAction="#izadji" text="Izlaz" />
+   </children>
+</AnchorPane>

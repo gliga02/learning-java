@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="borderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+    <top>
+        <VBox>
+            <MenuBar>
+                <Menu text="File">
+                    <items>
+                        <MenuItem onAction="#addClient" text="New" />
+                        <SeparatorMenuItem />
+                        <MenuItem onAction="#exit" text="Exit" />
+                    </items>
+                </Menu>
+            </MenuBar>
+
+            <ToolBar>
+                <HBox>
+                    <Button onAction="#addClient" text="Add new client">
+                        <tooltip>
+                            <Tooltip text="Add new client" />
+                        </tooltip>
+                    </Button>
+                </HBox>
+            </ToolBar>
+        </VBox>
+    </top>
+
+    <center>
+
+    </center>
+   <center>
+      <TableView fx:id="tableView" prefHeight="289.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="names" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="companies" prefWidth="75.0" text="Company" />
+            <TableColumn fx:id="phones" prefWidth="99.0" text="Telephone" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+   </center>
+</BorderPane>
